@@ -109,6 +109,42 @@ crux.Schema = [
     }
   },
   {
+    name: 'fast_ttfb',
+    label: 'Fast TTFB',
+    description: 'The percent of Time To First Byte experiences < 200 millisecond.',
+    dataType: 'NUMBER',
+    defaultAggregationType: 'SUM',
+    semantics: {
+      conceptType: 'METRIC',
+      semanticType: 'PERCENT',
+      isReaggregatable: true
+    }
+  },
+  {
+    name: 'avg_ttfb',
+    label: 'Average TTFB',
+    description: 'The percent of Time To First Byte experiences > 200 millisecond and < 1000 millisecond.',
+    dataType: 'NUMBER',
+    defaultAggregationType: 'SUM',
+    semantics: {
+      conceptType: 'METRIC',
+      semanticType: 'PERCENT',
+      isReaggregatable: true
+    }
+  },
+  {
+    name: 'slow_ttfb',
+    label: 'Slow TTFB',
+    description: 'The percent of Time To First Byte experiences > 1000 millisecond.',
+    dataType: 'NUMBER',
+    defaultAggregationType: 'SUM',
+    semantics: {
+      conceptType: 'METRIC',
+      semanticType: 'PERCENT',
+      isReaggregatable: true
+    }
+  },
+  {
     name: 'fast_fp',
     label: 'Fast FP',
     description: 'The percent of First Paint experiences < 1 second.',
